@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi, Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            background-color: #ffe6f2;
+            color: #d63384;
+            padding: 50px;
+            overflow: hidden;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .envelope {
+            display: inline-block;
+            padding: 20px;
+            background: #ff4d6d;
+            color: white;
+            border-radius: 10px;
+            font-size: 36px;
+            font-family: 'Dancing Script', cursive;
+            position: relative;
+            transform: rotate(-5deg);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+        .yes:hover {
+            background-color: #e6004c;
+        }
+        .no:hover {
+            background-color: #999;
+        }
+        @keyframes float-hearts {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: red;
+            animation: float-hearts 4s linear infinite;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope">Khushi, Will You Be My Valentine? 💖</div>
+        <div class="buttons">
+            <button class="yes" onclick="yesResponse()">YES ❤️</button>
+            <button class="no" onclick="noResponse()">NO 💔</button>
+        </div>
+        <div id="message" class="hidden">
+            <p>Khushi, my heart belongs to you, my days are brighter because of you, and my love for you grows stronger every moment.</p>
+            <p>Life is a beautiful journey, and I want to walk it hand in hand with you forever. Thank you for saying YES! 💕</p>
+            <p style="font-size: 24px; font-weight: bold; color: #ff4d6d;">WTF February 14? I LOVE YOU EVERYDAY, EVERY MINUTE, EVERY SECOND! ❤️</p>
+            <p>By yours truly and yours only,</p>
+            <p style="font-size: 22px; font-weight: bold; color: #d63384;">Ryan (Also your Babygirl) 😘</p>
+        </div>
+    </div>
+    <script>
+        function yesResponse() {
+            document.getElementById('message').classList.remove('hidden');
+            document.querySelector('.buttons').classList.add('hidden');
+        }
+        function noResponse() {
+            let noButton = document.querySelector('.no');
+            let randomX = Math.random() * (window.innerWidth - 100);
+            let randomY = Math.random() * (window.innerHeight - 100);
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        }
+        function createHearts() {
+            setInterval(() => {
+                let heart = document.createElement('div');
+                heart.innerHTML = "❤️";
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 4000);
+            }, 500);
+        }
+        createHearts();
+    </script>
+</body>
+</html>
