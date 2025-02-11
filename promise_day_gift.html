@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Khushi ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        body {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            background-color: #ffe6e6;
+            position: relative;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: red;
+            font-size: 40px;
+        }
+        .love-note {
+            font-size: 24px;
+            color: #d63384;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .envelope {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .envelope img {
+            width: 120px;
+            transition: transform 0.5s;
+            filter: hue-rotate(300deg);
+        }
+        .envelope:hover img {
+            transform: rotate(-10deg) scale(1.2);
+        }
+        .promise {
+            display: none;
+            font-size: 22px;
+            color: #ff3366;
+            margin-top: 10px;
+        }
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%);
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            50% { transform: translateY(-100px) scale(1.2); opacity: 0.7; }
+            100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts"></div>
+    <div class="container">
+        <h1>For My Love, <span style="color: red;">Khushi ❤️</span></h1>
+        <p>Click on an envelope to see a promise I make to you!</p>
+        <div class="envelopes">
+            <div class="envelope" onclick="showPromise(0)">
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Envelope">
+                <p class="promise" id="promise0"></p>
+            </div>
+            <div class="envelope" onclick="showPromise(1)">
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Envelope">
+                <p class="promise" id="promise1"></p>
+            </div>
+            <div class="envelope" onclick="showPromise(2)">
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Envelope">
+                <p class="promise" id="promise2"></p>
+            </div>
+            <div class="envelope" onclick="showPromise(3)">
+                <img src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png" alt="Envelope">
+                <p class="promise" id="promise3"></p>
+            </div>
+        </div>
+        <h2 style="margin-top: 50px; color: #d63384;">HAPPY PROMISE DAY MY LOVE 💍❤️</h2>
+        <p style="font-size: 22px; color: #d63384; margin-top: 30px;">Apke liye ek chhoti si baat, par sabse badi sachai – mai hamesha hamesha apse pyar karunga, meri jaan. Tum meri duniya ho, tumhare bina sab adhoora lagta hai. Tumhari hasi meri khushi hai, aur tumhara dukh mera dukh. Mai vaada karta hoon ki chahe duniya badal jaye, par mera pyar tumhare liye kabhi nahi badlega. Tum meri roshni ho, mera sukoon ho, aur meri sabse pyari adaa ho. Hamesha saath rahenge, har mod pe, har pal, har saans mein sirf tum. ❤️</p>
+    </div>
+
+    <script>
+        const promises = [
+            "I promise to always stand by your side no matter what. 💖",
+            "I promise to love you more with every passing day. 💕",
+            "I promise to make you smile even on your toughest days. 😊",
+            "This is a simple promise, but I will always keep it – I will hamesha hamesha love you, meri jaan. ❤️"
+        ];
+
+        function showPromise(index) {
+            document.getElementById("promise" + index).textContent = promises[index];
+            document.getElementById("promise" + index).style.display = "block";
+        }
+
+        function createHearts() {
+            for (let i = 0; i < 30; i++) {
+                let heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.querySelector(".hearts").appendChild(heart);
+            }
+        }
+        createHearts();
+    </script>
+</body>
+</html>
