@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi, Meri Jaan – Pyaar Bhara Hug Garden 💖</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            background-color: #ffd1dc;
+            text-align: center;
+            color: #8b0000;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-size: 1.5em;
+            font-style: italic;
+        }
+        .garden {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .flower {
+            width: 160px;
+            height: 160px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .flower:hover {
+            transform: scale(1.2);
+            background-color: rgba(255, 192, 203, 0.5);
+        }
+        .message {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.8em;
+            background: rgba(255, 182, 193, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.8);
+        }
+        .heartfelt-message {
+            margin-top: 50px;
+            font-size: 2em;
+            font-style: italic;
+            color: #ff1493;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Khushi, Meri Jaan 💖 – Yeh Pyaar Bhara Hug Garden Aapke Liye</h1>
+    <p>Whenever you miss me, click on a flower and feel my love and warm hug. 🌹</p>
+    <div class="garden">
+        <div class="flower" onclick="showMessage('sunflower')">🌻</div>
+        <div class="flower" onclick="showMessage('rose')">🌹</div>
+        <div class="flower" onclick="showMessage('cherry')">🌸</div>
+        <div class="flower" onclick="showMessage('lavender')">💜</div>
+        <div class="flower" onclick="showMessage('daisy')">🌼</div>
+    </div>
+    
+    <div id="message" class="message"></div>
+    
+    <p class="heartfelt-message">Meri Jaan, jitni baar aap yeh page dekho, mehsoos karo ki main yahin hoon, aapko pyaar se thaam kar, ek gehra hug de raha hoon. Aap meri duniya ho, mera sukoon ho, aur har saans ke saath main sirf aapko yaad karta hoon. Aapse milne ka intezaar har pal badh raha hai. Jab tak hum mil nahi jaate, yeh hug garden aapke liye hai. ❤️🤗</p>
+    
+    <script>
+        function showMessage(type) {
+            let messages = {
+                sunflower: "🌻 Meri roshni, yeh hug ek narm dhoop ki tarah hai jo aapko har subah garmahat deta hai. Aankhein band karo aur mehsoos karo mera pyaar. ☀️💕",
+                rose: "🌹 Meri jaan, yeh ek gehra, pyaar bhara hug hai jo main aapko hamesha dena chahta hoon. Dil se lagake mehsoos karo meri dhadkan aapke saath. ❤️💋",
+                cherry: "🌸 Pyari si Khushi, yeh ek halka, meetha hug hai, jaise hawa mein udte gulabi patte. Main aapko baahon mein bharke har ghum bhula dunga. 💕🌿",
+                lavender: "💜 Mera pyaara sukoon, yeh hug ek shaant raat ki tarah hai jo aapko sirf pyaar aur dular deta hai. Aapki muskurahat meri jaan hai. 🌙💖",
+                daisy: "🌼 Mere hasi ke pal, yeh ek masti bhara, achanak ka hug hai! Aapko pyaar se ghoomakar mehsoos karwana ki main hamesha aapke saath hoon. 💛😊"
+            };
+            document.getElementById('message').innerText = messages[type];
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
