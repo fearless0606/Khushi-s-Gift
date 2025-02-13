@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasons Why I Love You 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?valentine,love') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 192, 203, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            color: #ff3366;
+        }
+        .reason {
+            font-size: 22px;
+            font-family: 'Great Vibes', cursive;
+            color: red;
+            margin: 10px 0;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff3366;
+            margin: 20px 0;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        #next-btn {
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        #next-btn:hover {
+            background-color: #cc0052;
+        }
+        .big-heart {
+            position: absolute;
+            font-size: 100px;
+            color: red;
+        }
+        .heart-left {
+            top: 10px;
+            left: 20px;
+        }
+        .heart-right {
+            top: 10px;
+            right: 20px;
+        }
+        .love-message {
+            font-size: 22px;
+            color: red;
+            margin-top: 40px;
+            font-weight: bold;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="big-heart heart-left">❤️</div>
+    <div class="big-heart heart-right">❤️</div>
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+    </audio>
+    <div class="container">
+        <h1>💖 Reasons Why I Love You, Khushi 💖</h1>
+        <p class="heart">❤️</p>
+        <p class="reason" id="reason-text">Tap the button to reveal a reason!</p>
+        <button id="next-btn">Next Reason</button>
+    </div>
+    <p class="love-message">Baaaabyyyyyy, u are the sweetesttt, the kindessssttt, the mosttttttt beaaaautifulll person in this whoooleeeeee universeeee! 💖 U make my heart skipppp a beaaaattt every time u smile, and I can'ttttttt stop thinking aboutttt uuuu every singleeee momentttt. Even though we are far away, my love for u is as stronggggg as everrrr. I missss uuuu soooo muchhh and I can'ttt waittt to be withhh uuuu!!! 💞💕💓💗💖💘💝 I LOVEEE UUUUUUUUUUUUUUUUUUUU!!!! 😘❤️🔥</p>
+    <script>
+        const reasons = [
+            "Your smile makes my entire day better. 😊💖",
+            "The way you understand me, even when I don’t say a word.",
+            "You support me no matter what—I always feel safe with you.",
+            "Your laugh is the most beautiful sound in the world. 🥰",
+            "You make distance feel like nothing because our bond is so strong.",
+            "You bring out the best in me and push me to be better.",
+            "Every time I talk to you, I feel at peace, like I’m home.",
+            "You’re my biggest cheerleader and my greatest comfort. 💕",
+            "I love the way you get excited about small things—it’s adorable.",
+            "Even when we’re apart, I still feel your love in everything I do.",
+            "You make even the most ordinary moments feel special.",
+            "I can be my true self around you, without any fear of judgment.",
+            "You make me laugh like no one else can. 😂",
+            "No matter what happens, I know I can always count on you.",
+            "You are the most beautiful person, inside and out. 🌸",
+            "I love how you say my name—it just feels different coming from you.",
+            "The way you care about me melts my heart every single time.",
+            "You are my safe space, my happiness, my everything. ❤️",
+            "Every love song reminds me of you. 🎶",
+            "I love you simply because you’re YOU—and that’s all I’ll ever need."
+        ];
+
+        let index = 0;
+        document.getElementById("next-btn").addEventListener("click", function() {
+            document.getElementById("reason-text").innerText = reasons[index];
+            index = (index + 1) % reasons.length;
+        });
+    </script>
+</body>
+</html>
