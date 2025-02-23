@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sweet Khushi</title>
+    <style>
+        body {
+            font-family: 'Brush Script MT', cursive; /* Cursive font */
+            background-image: url('https://images.unsplash.com/photo-1511918984140-1b0c1e1c1c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080'); /* Background image */
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            backdrop-filter: blur(5px); /* Blurring the background */
+        }
+        h1 {
+            color: #ff6f61; /* Heart color */
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 24px;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff6f61;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .hug {
+            font-size: 100px;
+            animation: hugAnimation 2s infinite;
+        }
+        @keyframes hugAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 18px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .button {
+            background-color: #ff6f61; /* Button color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff4c4c; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey Khushi ❤️</h1>
+    <p>Just a little note to remind you how amazing you are!</p>
+    <p>I know this time can be tough, but remember, I'm here for you.</p>
+    <p>Whenever you feel down, just think of all the love surrounding you.</p>
+    <p>Take a moment to relax, and know that you are cherished.</p>
+    
+    <div class="heart">💖</div>
+    <div class="hug">🤗</div>
+    
+    <p>Let me know if you need anything, even if it's just a cuddle!</p>
+    
+    <button class="button" onclick="alert('I love you, Khushi!')">Click Me for a Surprise!</button>
+    
+    <footer>
+        <p>&copy; Yours and yours only, Ryan</p>
+    </footer>
+</body>
+</html>
